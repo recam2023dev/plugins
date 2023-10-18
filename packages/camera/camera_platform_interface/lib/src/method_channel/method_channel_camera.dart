@@ -535,7 +535,7 @@ class MethodChannelCamera extends CameraPlatform {
   }
 
   /// Returns the resolution preset as a String.
-  String _serializeResolutionPreset(ResolutionPreset resolutionPreset) {
+  String? _serializeResolutionPreset(ResolutionPreset resolutionPreset) {
     switch (resolutionPreset) {
       case ResolutionPreset.max:
         return 'max';
