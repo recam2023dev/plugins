@@ -67,6 +67,7 @@
   XCTAssertEqual(FLTResolutionPresetVeryHigh, FLTGetFLTResolutionPresetForString(@"veryHigh"));
   XCTAssertEqual(FLTResolutionPresetUltraHigh, FLTGetFLTResolutionPresetForString(@"ultraHigh"));
   XCTAssertEqual(FLTResolutionPresetMax, FLTGetFLTResolutionPresetForString(@"max"));
+  XCTAssertEqual(FLTResolutionPresetPhoto, FLTGetFLTResolutionPresetForString(@"photo"));
   XCTAssertThrows(FLTGetFLTFlashModeForString(@"unknown"));
 }
 
