@@ -231,7 +231,7 @@ NSString *const errorMethod = @"error";
 
 - (void)captureToFile:(FLTThreadSafeFlutterResult *)result API_AVAILABLE(ios(10)) {
   AVCapturePhotoSettings *settings = [AVCapturePhotoSettings photoSettings];
-  if (_resolutionPreset == FLTResolutionPresetPhoto) {
+  if (_resolutionPreset == FLTResolutionPresetPhoto || _resolutionPreset == FLTResolutionPresetMax) {
     [settings setHighResolutionPhotoEnabled:YES];
   }
 
@@ -331,6 +331,11 @@ NSString *const errorMethod = @"error";
                        _captureDevice.activeFormat.highResolutionStillImageDimensions.height);
       break;
     case FLTResolutionPresetMax:
+      _captureSession.sessionPreset = AVCaptureSessionPresetPhoto;
+      _previewSize =
+            CGSizeMake(_captureDevice.activeFormat.highResolutionStillImageDimensions.width,
+                       _captureDevice.activeFormat.highResolutionStillImageDimensions.height);
+      break;
     case FLTResolutionPresetUltraHigh:
       if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset3840x2160]) {
         _captureSession.sessionPreset = AVCaptureSessionPreset3840x2160;
