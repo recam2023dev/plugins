@@ -552,9 +552,11 @@ class MethodChannelCamera extends CameraPlatform {
       case ResolutionPreset.photo:
         return 'photo';
 
+      // ignore: no_default_cases
       default:
         return 'photo';
     }
+    return '';
   }
 
   /// Converts messages received from the native platform into device events.
