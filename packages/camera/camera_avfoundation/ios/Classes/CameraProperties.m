@@ -162,7 +162,10 @@ FLTResolutionPreset FLTGetFLTResolutionPresetForString(NSString *preset) {
     return FLTResolutionPresetUltraHigh;
   } else if ([preset isEqualToString:@"max"]) {
     return FLTResolutionPresetMax;
-  } else {
+  } else if ([preset isEqualToString:@"photo"]) {
+    return FLTResolutionPresetPhoto;
+  } 
+  else {
     NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain
                                          code:NSURLErrorUnknown
                                      userInfo:@{
