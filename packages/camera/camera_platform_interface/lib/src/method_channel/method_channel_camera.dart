@@ -535,7 +535,9 @@ class MethodChannelCamera extends CameraPlatform {
   }
 
   /// Returns the resolution preset as a String.
-  String _serializeResolutionPreset(ResolutionPreset resolutionPreset) {
+  ///
+  ///
+  String? _serializeResolutionPreset(ResolutionPreset resolutionPreset) {
     switch (resolutionPreset) {
       case ResolutionPreset.max:
         return 'max';
@@ -549,6 +551,12 @@ class MethodChannelCamera extends CameraPlatform {
         return 'medium';
       case ResolutionPreset.low:
         return 'low';
+      case ResolutionPreset.photo:
+        return 'photo';
+
+      // ignore: no_default_cases
+      default:
+        return 'photo';
     }
   }
 

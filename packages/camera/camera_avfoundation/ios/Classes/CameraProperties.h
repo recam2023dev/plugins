@@ -100,6 +100,7 @@ typedef NS_ENUM(NSInteger, FLTResolutionPreset) {
   FLTResolutionPresetVeryHigh,
   FLTResolutionPresetUltraHigh,
   FLTResolutionPresetMax,
+  FLTResolutionPresetPhoto,
 };
 
 /**

@@ -17,10 +17,17 @@ flutter:
         dartPluginClass: AVFoundationCamera
 
 dependencies:
-  camera_platform_interface: ^2.3.1
+  # camera_platform_interface: ^2.3.1
   flutter:
     sdk: flutter
   stream_transform: ^2.0.0
+
+dependency_overrides:
+  camera_platform_interface:
+    git:
+      url: https://github.com/recam2023dev/plugins
+      ref: fix-ios-photo-resolution
+      path: packages/camera/camera_platform_interface
 
 dev_dependencies:
   async: ^2.5.0
@@ -28,3 +35,4 @@ dev_dependencies:
     sdk: flutter
   flutter_test:
     sdk: flutter
+  pigeon: ^12.0.0

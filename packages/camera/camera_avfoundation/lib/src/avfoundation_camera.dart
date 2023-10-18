@@ -552,6 +552,10 @@ class AVFoundationCamera extends CameraPlatform {
         return 'medium';
       case ResolutionPreset.low:
         return 'low';
+      case ResolutionPreset.photo:
+        return 'photo';
+      default:
+        throw ArgumentError('Unknown ResolutionPreset value');
     }
     // The enum comes from a different package, which could get a new value at
     // any time, so provide a fallback that ensures this won't break when used
