@@ -558,7 +558,6 @@ class MethodChannelCamera extends CameraPlatform {
       default:
         return 'photo';
     }
-    return '';
   }
 
   /// Converts messages received from the native platform into device events.
