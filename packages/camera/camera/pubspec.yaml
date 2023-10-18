@@ -32,13 +32,13 @@ dependencies:
 dependency_overrides:
   camera_avfoundation:
     git:
-      url: https://github.com/tapeo/plugins
-      ref: fix-photo-resolution
+      url: https://github.com/recam2023dev/plugins
+      ref: fixcamera-v2
       path: packages/camera/camera_avfoundation
   camera_platform_interface:
     git:
-      url: https://github.com/tapeo/plugins
-      ref: fix-photo-resolution
+      url: https://github.com/recam2023dev/plugins
+      ref: fixcamera-v2
       path: packages/camera/camera_platform_interface
 dev_dependencies:
   flutter_driver:
