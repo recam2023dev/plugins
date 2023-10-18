@@ -34,6 +34,8 @@ ImageFormatGroup _imageFormatGroupFromPlatformData(dynamic data) {
       return ImageFormatGroup.yuv420;
     case 256: // android.graphics.ImageFormat.JPEG
       return ImageFormatGroup.jpeg;
+    default:
+      return ImageFormatGroup.jpeg;
   }
 
   return ImageFormatGroup.unknown;
