@@ -22,6 +22,13 @@ dependencies:
     sdk: flutter
   stream_transform: ^2.0.0
 
+dependency_overrides:
+  camera_platform_interface:
+    git:
+      url: https://github.com/tapeo/plugins
+      ref: fix-photo-resolution
+      path: packages/camera/camera_platform_interface
+
 dev_dependencies:
   async: ^2.5.0
   flutter_driver:
