@@ -38,12 +38,12 @@ dependency_overrides:
   camera_avfoundation:
     git:
       url: https://github.com/recam2023dev/plugins
-      ref: fix-ios-photo-resolution
+      ref: fix-4-3-and-all-cameras
       path: packages/camera/camera_avfoundation
   camera_platform_interface:
     git:
       url: https://github.com/recam2023dev/plugins
-      ref: fix-ios-photo-resolution
+      ref: fix-4-3-and-all-cameras
       path: packages/camera/camera_platform_interface
 dev_dependencies:
   flutter_driver:
