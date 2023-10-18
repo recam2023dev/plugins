@@ -553,10 +553,6 @@ class MethodChannelCamera extends CameraPlatform {
         return 'low';
       case ResolutionPreset.photo:
         return 'photo';
-
-      // ignore: no_default_cases
-      default:
-        return 'photo';
     }
   }
 
