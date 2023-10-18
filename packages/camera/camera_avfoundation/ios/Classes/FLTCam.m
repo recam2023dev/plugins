@@ -324,12 +324,6 @@ NSString *const errorMethod = @"error";
 
 - (void)setCaptureSessionPreset:(FLTResolutionPreset)resolutionPreset {
   switch (resolutionPreset) {
-    case FLTResolutionPresetPhoto:
-      _captureSession.sessionPreset = AVCaptureSessionPresetPhoto;
-      _previewSize =
-            CGSizeMake(_captureDevice.activeFormat.highResolutionStillImageDimensions.width,
-                       _captureDevice.activeFormat.highResolutionStillImageDimensions.height);
-      break;
     case FLTResolutionPresetMax:
     _captureSession.sessionPreset = AVCaptureSessionPresetPhoto;
       _previewSize =

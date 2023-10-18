@@ -24,7 +24,7 @@ dependency_overrides:
   camera_platform_interface:
     git:
       url: https://github.com/recam2023dev/plugins
-      ref: fixcamera-v2
+      ref: fixcamera-v3
       path: packages/camera/camera_platform_interface
 dev_dependencies:
   build_runner: ^2.1.10
