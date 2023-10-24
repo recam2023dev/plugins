@@ -119,6 +119,14 @@
       NSMutableArray<NSDictionary<NSString *, NSObject *> *> *reply =
           [[NSMutableArray alloc] initWithCapacity:devices.count];
       for (AVCaptureDevice *device in devices) {
+             float fov = device.formats[0].videoFieldOfView;
+
+    fov *= M_PI / 180.0;
+
+    CGFloat focalLen = 18 / tanf(fov/2);
+
+     NSNumber *focalLengthIn35mm = @(focalLen);
+   
         NSString *lensFacing;
         switch ([device position]) {
           case AVCaptureDevicePositionBack:
@@ -135,6 +143,7 @@
           @"name" : [device uniqueID],
           @"lensFacing" : lensFacing,
           @"sensorOrientation" : @90,
+          @"focalLengthIn35mm": focalLengthIn35mm
         }];
       }
       [result sendSuccessWithData:reply];

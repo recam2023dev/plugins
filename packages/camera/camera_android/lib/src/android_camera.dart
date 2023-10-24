@@ -80,11 +80,11 @@ class AndroidCamera extends CameraPlatform {
 
       return cameras.map((Map<dynamic, dynamic> camera) {
         return CameraDescription(
-          name: camera['name']! as String,
-          lensDirection:
-              parseCameraLensDirection(camera['lensFacing']! as String),
-          sensorOrientation: camera['sensorOrientation']! as int,
-        );
+            name: camera['name']! as String,
+            lensDirection:
+                parseCameraLensDirection(camera['lensFacing']! as String),
+            sensorOrientation: camera['sensorOrientation']! as int,
+            focalLengthIn35mm: camera['focalLengthIn35mm'] as double?);
       }).toList();
     } on PlatformException catch (e) {
       throw CameraException(e.code, e.message);

@@ -114,6 +114,15 @@ public final class CameraUtils {
       details.put("sensorOrientation", sensorOrientation);
 
       int lensFacing = characteristics.get(CameraCharacteristics.LENS_FACING);
+
+      // float[] focalLength = characteristics.get(CameraCharacteristics.LENS_INFO_AVAILABLE_FOCAL_LENGTHS);
+      // details.put("focalLens", focalLength);
+
+      float sensorWidth = characteristics.get(CameraCharacteristics.SENSOR_INFO_PHYSICAL_SIZE).getWidth();
+      float focalLength = characteristics.get(CameraCharacteristics.LENS_INFO_AVAILABLE_FOCAL_LENGTHS)[0];
+      float focalLengthIn35mm = (36 * focalLength) / sensorWidth;
+
+      details.put("focalLengthIn35mm", focalLengthIn35mm);
       switch (lensFacing) {
         case CameraMetadata.LENS_FACING_FRONT:
           details.put("lensFacing", "front");

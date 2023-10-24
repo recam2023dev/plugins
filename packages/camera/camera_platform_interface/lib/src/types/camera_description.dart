@@ -20,11 +20,11 @@ enum CameraLensDirection {
 @immutable
 class CameraDescription {
   /// Creates a new camera description with the given properties.
-  const CameraDescription({
-    required this.name,
-    required this.lensDirection,
-    required this.sensorOrientation,
-  });
+  const CameraDescription(
+      {required this.name,
+      required this.lensDirection,
+      required this.sensorOrientation,
+      this.focalLengthIn35mm});
 
   /// The name of the camera device.
   final String name;
@@ -40,6 +40,10 @@ class CameraDescription {
   /// On Android, also defines the direction of rolling shutter readout, which
   /// is from top to bottom in the sensor's coordinate system.
   final int sensorOrientation;
+
+  ///ff
+  ///
+  final double? focalLengthIn35mm;
 
   @override
   bool operator ==(Object other) =>
